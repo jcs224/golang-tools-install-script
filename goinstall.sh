@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-VERSION="1.9.3"
+# VERSION="1.9.3"
+VERSION="1.10.3"
 
 print_help() {
     echo "Usage: bash goinstall.sh OPTIONS"
@@ -46,10 +47,10 @@ else
     exit 1
 fi
 
-if [ -d "$HOME/.go" ] || [ -d "$HOME/go" ]; then
-    echo "The 'go' or '.go' directories already exist. Exiting."
-    exit 1
-fi
+# if [ -d "$HOME/.go" ] || [ -d "$HOME/go" ]; then
+#     echo "The 'go' or '.go' directories already exist. Exiting."
+#     exit 1
+# fi
 
 echo "Downloading $DFILE ..."
 wget https://storage.googleapis.com/golang/$DFILE -O /tmp/go.tar.gz
